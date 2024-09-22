@@ -23,4 +23,10 @@ public class ExTemperaturaSemanaTest {
         int[] temperaturas = {2, 2, 2, 2, 2, 2, 1};
         assertEquals("6", ExTemperaturaSemana.quantosDiasSemanaTempAcimaMedia(temperaturas));
     }
+
+    @Test
+    public void testErroMaisDeSeteValores() {
+        int[] temperaturas = {2, 2, 2, 2, 2, 2, 3, 4};
+        assertEquals("Erro", ExTemperaturaSemana.quantosDiasSemanaTempAcimaMedia(temperaturas));
+    }
 }
